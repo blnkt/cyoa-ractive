@@ -1,3 +1,17 @@
-<p>Another new <span on-click='select'>Component</span></p>
-
-
+<div class='chapter-list'>
+	{{#chapters}}
+		<div class='chapter-block'>
+		  <h4 class='chapter-author'>{{author}}</h4>
+		  <h6 class='chapter-prompt'>{{prompt}}</h4>
+		  <div class='chapter-episode'>{{episode}}</div>
+		</div>
+	{{/chapters}}
+</div>
+<div>
+  <form name='chapter-form' class='chapter-form' on-submit='post'>
+    <input class='author-input' value='{{author}}' placeholder='your name' required>
+    <input class='prompt-input' value='{{prompt}}' placeholder='chapter prompt' required>
+    <textarea value='{{episode}}' placeholder='add to the adventure...' required></textarea>
+    <input type='submit' value='submit chapter'>
+  </form>
+</div>
